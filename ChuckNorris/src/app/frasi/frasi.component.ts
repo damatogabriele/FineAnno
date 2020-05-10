@@ -16,6 +16,9 @@ export class FrasiComponent implements OnInit {
 this.dataService.sendGetRequest().subscribe((data: any[])=>{
       console.log(data);
       this.frase = data;
+      console.log(this.frase);
+      alert(JSON.stringify(this.frase))
+      
       //JSON.stringify()    per trasformare gli oggetti in json
 })
   }
