@@ -8,18 +8,18 @@ import { Frase } from '../frase.model'
   styleUrls: ['./frasi.component.css']
 })
 export class FrasiComponent implements OnInit {
-       frase : Frase;
+       
+    frase : Frase;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
 
-this.dataService.sendGetRequest().subscribe((data: Frase[])=>{
-      console.log(data);
-      //this.frase = data;
-      console.log(this.frase);
+this.dataService.sendGetRandomRequest().subscribe((data: Frase)=>{
       
-      
+    this.frase = data;
+    console.log(this.frase);
+       
 })
   }
 

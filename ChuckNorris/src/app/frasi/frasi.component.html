@@ -3,10 +3,11 @@
     
 
     
-        <mat-card-header>
-            <mat-card-title>{{frase.categories}}</mat-card-title>
-            <mat-card-title>{{frase.id}}</mat-card-title>
-            <mat-card-title>{{frase.joke}}</mat-card-title>
+        <mat-card-header *ngIf="frase">
+        <h1>ciao</h1>
+            <mat-card-title>{{ frase.categories }}</mat-card-title>
+            <mat-card-title>{{ frase.id }}</mat-card-title>
+            <mat-card-title>{{ frase.joke }}</mat-card-title>
 
         </mat-card-header>
     

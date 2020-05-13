@@ -9,7 +9,7 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public sendGetRequest(){
+  public sendGetRandomRequest(){
     return this.httpClient.get(this.REST_API_SERVER);
   }
 }
