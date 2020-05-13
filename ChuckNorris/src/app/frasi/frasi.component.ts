@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Frase } from '../frase.model'
 
 @Component({
   selector: 'app-frasi',
@@ -7,19 +8,18 @@ import { DataService } from '../data.service';
   styleUrls: ['./frasi.component.css']
 })
 export class FrasiComponent implements OnInit {
-       frase = [];
+       frase : Frase;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
 
-this.dataService.sendGetRequest().subscribe((data: any[])=>{
+this.dataService.sendGetRequest().subscribe((data: Frase[])=>{
       console.log(data);
-      this.frase = data;
+      //this.frase = data;
       console.log(this.frase);
-      alert(JSON.stringify(this.frase))
       
-      //JSON.stringify()    per trasformare gli oggetti in json
+      
 })
   }
 
