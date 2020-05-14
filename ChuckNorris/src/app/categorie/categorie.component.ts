@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Categ } from '../categ.model'
 
 @Component({
   selector: 'app-categorie',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categorie.component.css']
 })
 export class CategorieComponent implements OnInit {
+     
+    categ : Categ;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+      this.dataService.sendGetCateRequest().subscribe((data: Categ)=>{
+      
+    this.categ = data;
+    console.log(this.categ);
+    
+})
   }
 
 }

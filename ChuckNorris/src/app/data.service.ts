@@ -6,11 +6,17 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
 
    private REST_API_SERVER = "http://api.icndb.com/jokes/random/";
+   private categorie = "http://api.icndb.com/categories";
 
   constructor(private httpClient: HttpClient) { }
 
   public sendGetRandomRequest(){
     return this.httpClient.get(this.REST_API_SERVER);
+    
+  }
+
+public sendGetCateRequest(){
+    return this.httpClient.get(this.categorie);
     
   }
 
