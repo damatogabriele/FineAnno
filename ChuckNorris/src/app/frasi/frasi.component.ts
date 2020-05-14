@@ -8,9 +8,11 @@ import { Frase } from '../frase.model'
   styleUrls: ['./frasi.component.css']
 })
 export class FrasiComponent implements OnInit {
+   
     frase : Frase;
     cate: boolean= true;
     cate1 : boolean=false;
+
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
