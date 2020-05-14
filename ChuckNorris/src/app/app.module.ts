@@ -10,12 +10,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FrasiComponent } from './frasi/frasi.component';
+import { CategorieComponent } from './categorie/categorie.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FrasiComponent
+    FrasiComponent,
+    CategorieComponent
 
   ],
 
