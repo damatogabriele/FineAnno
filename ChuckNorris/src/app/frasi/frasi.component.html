@@ -1,13 +1,16 @@
 
-<<div style="padding: 13px;">
+<<div style="padding: 20px;">
     
 
     
         <mat-card-header *ngIf="frase">
-        <h1>ciao</h1>
-            <mat-card-title>{{ frase.categories }}</mat-card-title>
-            <mat-card-title>{{ frase.id }}</mat-card-title>
-            <mat-card-title>{{ frase.joke }}</mat-card-title>
+        <h2 *ngIf="cate">Categoria:</h2>
+        <h2 *ngIf="cate1">Nessuna categoria</h2>
+            <h2>{{ frase.value.categories }}</h2>
+            <h2>Numero Battuta:</h2>
+            <h2>{{ frase.value.id }}</h2>
+            <h2>Battuta:</h2>
+            <h2>{{ frase.value.joke }}</h2>
 
         </mat-card-header>
     
