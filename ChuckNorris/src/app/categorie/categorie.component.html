@@ -1,10 +1,25 @@
 <<div style="padding: 20px;">
-    
 
-    
-        <mat-card-header>
-        <h2>Categorie:</h2>
-            <h2>{{ categ.value.categories }}</h2>
-        </mat-card-header>
-    
-</div>
+
+
+	<mat-card-header>
+		<h2>Categorie:</h2>
+		<button (click)="cat1">Categoria nerdy</button>
+		<div *ngIf="categ1">
+			<h2>{{ frase.value.categories }}</h2>
+			<h2>Numero Battuta:</h2>
+			<h2>{{ frase.value.id }}</h2>
+			<h2>Battuta:</h2>
+			<h2>{{ frase.value.joke }}</h2>
+		</div>
+		<button (click)="cat2">Categoria explicit</button>
+        <div *ngIf="categ2">
+		<h2>{{ frase.value.categories }}</h2>
+		<h2>Numero Battuta:</h2>
+		<h2>{{ frase.value.id }}</h2>
+		<h2>Battuta:</h2>
+		<h2>{{ frase.value.joke }}</h2>
+        </div>
+	</mat-card-header>
+
+	</div>
